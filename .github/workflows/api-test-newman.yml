@@ -1,0 +1,48 @@
+name: API Tests (Newman)
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  newman:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. Checkout do código
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # 2. Instalar Node.js 
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      # 3. Instalar Newman e os reporters necessários
+      - name: Install Newman & reporters
+        run: |
+          npm install -g newman \
+                         newman-reporter-html \
+                         newman-reporter-htmlextra
+
+      # 4. Executar a coleção
+      #    Ajuste os nomes dos arquivos conforme o seu repositório:
+      #      - collections/minha-colecao.json
+      #      - env/ambiente-qa.json
+      - name: Run Newman with htmlextra report
+        run: |
+          mkdir -p relatorios
+          newman run collections/pokeapi-postman-collection.json \
+            -r htmlextra \
+            --reporter-htmlextra-export relatorios/relatorio.html \
+            --reporter-htmlextra-title "Relatório API – CI"
+
+      # 5. Fazer upload do relatório como artefato do workflow
+      - name: Upload report artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: newman-html-report
+          path: relatorios/relatorio.html

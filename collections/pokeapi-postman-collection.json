@@ -1,0 +1,967 @@
+{
+  "info": {
+    "name": "Pok\u00e9API - Full Collection",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_postman_id": "pokeapi-collection-20250628035751"
+  },
+  "item": [
+    {
+      "name": "Root - Lista de Recursos",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://pokeapi.co/api/v2/",
+          "protocol": "https",
+          "host": [
+            "pokeapi",
+            "co"
+          ],
+          "path": [
+            "api",
+            "v2"
+          ]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"Status 200\", () => pm.response.code === 200);"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Ability - Stench",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://pokeapi.co/api/v2/ability/1",
+          "protocol": "https",
+          "host": [
+            "pokeapi",
+            "co"
+          ],
+          "path": [
+            "api",
+            "v2",
+            "ability",
+            "1"
+          ]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"Habilidade \u00e9 Stench\", () => pm.expect(pm.response.json().name).to.eql(\"stench\"));"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Berry - Cheri",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://pokeapi.co/api/v2/berry/1",
+          "protocol": "https",
+          "host": [
+            "pokeapi",
+            "co"
+          ],
+          "path": [
+            "api",
+            "v2",
+            "berry",
+            "1"
+          ]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"Berry \u00e9 Cheri\", () => pm.expect(pm.response.json().name).to.eql(\"cheri\"));"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Berry Firmness - Very Soft",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://pokeapi.co/api/v2/berry-firmness/1",
+          "protocol": "https",
+          "host": [
+            "pokeapi",
+            "co"
+          ],
+          "path": [
+            "api",
+            "v2",
+            "berry-firmness",
+            "1"
+          ]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"Firmness \u00e9 very-soft\", () => pm.expect(pm.response.json().name).to.eql(\"very-soft\"));"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Berry Flavor - Spicy",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://pokeapi.co/api/v2/berry-flavor/1",
+          "protocol": "https",
+          "host": [
+            "pokeapi",
+            "co"
+          ],
+          "path": [
+            "api",
+            "v2",
+            "berry-flavor",
+            "1"
+          ]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"Flavor \u00e9 spicy\", () => pm.expect(pm.response.json().name).to.eql(\"spicy\"));"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Contest Type - Cool",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://pokeapi.co/api/v2/contest-type/1",
+          "protocol": "https",
+          "host": [
+            "pokeapi",
+            "co"
+          ],
+          "path": [
+            "api",
+            "v2",
+            "contest-type",
+            "1"
+          ]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"Tipo \u00e9 cool\", () => pm.expect(pm.response.json().name).to.eql(\"cool\"));"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Contest Effect - ID 1",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://pokeapi.co/api/v2/contest-effect/1",
+          "protocol": "https",
+          "host": [
+            "pokeapi",
+            "co"
+          ],
+          "path": [
+            "api",
+            "v2",
+            "contest-effect",
+            "1"
+          ]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"Contest Effect retornado\", () => pm.response.code === 200);"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Super Contest Effect - ID 1",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://pokeapi.co/api/v2/super-contest-effect/1",
+          "protocol": "https",
+          "host": [
+            "pokeapi",
+            "co"
+          ],
+          "path": [
+            "api",
+            "v2",
+            "super-contest-effect",
+            "1"
+          ]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"Super Contest Effect retornado\", () => pm.response.code === 200);"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Encounter Method - Walk",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://pokeapi.co/api/v2/encounter-method/1",
+          "protocol": "https",
+          "host": [
+            "pokeapi",
+            "co"
+          ],
+          "path": [
+            "api",
+            "v2",
+            "encounter-method",
+            "1"
+          ]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"M\u00e9todo \u00e9 walk\", () => pm.expect(pm.response.json().name).to.eql(\"walk\"));"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Encounter Condition - Swarm",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://pokeapi.co/api/v2/encounter-condition/1",
+          "protocol": "https",
+          "host": [
+            "pokeapi",
+            "co"
+          ],
+          "path": [
+            "api",
+            "v2",
+            "encounter-condition",
+            "1"
+          ]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"Condi\u00e7\u00e3o \u00e9 swarm\", () => pm.expect(pm.response.json().name).to.eql(\"swarm\"));"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Encounter Condition Value - Swarm Yes",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://pokeapi.co/api/v2/encounter-condition-value/1",
+          "protocol": "https",
+          "host": [
+            "pokeapi",
+            "co"
+          ],
+          "path": [
+            "api",
+            "v2",
+            "encounter-condition-value",
+            "1"
+          ]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"Valor \u00e9 swarm-yes\", () => pm.expect(pm.response.json().name).to.eql(\"swarm-yes\"));"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Evolution Chain - ID 1",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://pokeapi.co/api/v2/evolution-chain/1",
+          "protocol": "https",
+          "host": [
+            "pokeapi",
+            "co"
+          ],
+          "path": [
+            "api",
+            "v2",
+            "evolution-chain",
+            "1"
+          ]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"Cadeia de evolu\u00e7\u00e3o retornada\", () => pm.response.code === 200);"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Evolution Trigger - Level-up",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://pokeapi.co/api/v2/evolution-trigger/1",
+          "protocol": "https",
+          "host": [
+            "pokeapi",
+            "co"
+          ],
+          "path": [
+            "api",
+            "v2",
+            "evolution-trigger",
+            "1"
+          ]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"Trigger \u00e9 level-up\", () => pm.expect(pm.response.json().name).to.eql(\"level-up\"));"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Generation - Generation I",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://pokeapi.co/api/v2/generation/1",
+          "protocol": "https",
+          "host": [
+            "pokeapi",
+            "co"
+          ],
+          "path": [
+            "api",
+            "v2",
+            "generation",
+            "1"
+          ]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"Gera\u00e7\u00e3o \u00e9 generation-i\", () => pm.expect(pm.response.json().name).to.eql(\"generation-i\"));"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Pokedex - Kanto",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://pokeapi.co/api/v2/pokedex/2",
+          "protocol": "https",
+          "host": [
+            "pokeapi",
+            "co"
+          ],
+          "path": [
+            "api",
+            "v2",
+            "pokedex",
+            "2"
+          ]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"Pokedex \u00e9 kanto\", () => pm.expect(pm.response.json().name).to.eql(\"kanto\"));"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Version - Red",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://pokeapi.co/api/v2/version/1",
+          "protocol": "https",
+          "host": [
+            "pokeapi",
+            "co"
+          ],
+          "path": [
+            "api",
+            "v2",
+            "version",
+            "1"
+          ]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"Vers\u00e3o \u00e9 red\", () => pm.expect(pm.response.json().name).to.eql(\"red\"));"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Version Group - Red-Blue",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://pokeapi.co/api/v2/version-group/1",
+          "protocol": "https",
+          "host": [
+            "pokeapi",
+            "co"
+          ],
+          "path": [
+            "api",
+            "v2",
+            "version-group",
+            "1"
+          ]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"Grupo \u00e9 red-blue\", () => pm.expect(pm.response.json().name).to.eql(\"red-blue\"));"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Item - Master Ball",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://pokeapi.co/api/v2/item/1",
+          "protocol": "https",
+          "host": [
+            "pokeapi",
+            "co"
+          ],
+          "path": [
+            "api",
+            "v2",
+            "item",
+            "1"
+          ]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"Item \u00e9 master-ball\", () => pm.expect(pm.response.json().name).to.eql(\"master-ball\"));"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Item Attribute - Countable",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://pokeapi.co/api/v2/item-attribute/1",
+          "protocol": "https",
+          "host": [
+            "pokeapi",
+            "co"
+          ],
+          "path": [
+            "api",
+            "v2",
+            "item-attribute",
+            "1"
+          ]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"Atributo \u00e9 countable\", () => pm.expect(pm.response.json().name).to.eql(\"countable\"));"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Item Category - Stat Boosts",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://pokeapi.co/api/v2/item-category/1",
+          "protocol": "https",
+          "host": [
+            "pokeapi",
+            "co"
+          ],
+          "path": [
+            "api",
+            "v2",
+            "item-category",
+            "1"
+          ]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"Categoria \u00e9 stat-boosts\", () => pm.expect(pm.response.json().name).to.eql(\"stat-boosts\"));"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Item Fling Effect - Badly Poison",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://pokeapi.co/api/v2/item-fling-effect/1",
+          "protocol": "https",
+          "host": [
+            "pokeapi",
+            "co"
+          ],
+          "path": [
+            "api",
+            "v2",
+            "item-fling-effect",
+            "1"
+          ]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"Fling Effect \u00e9 badly-poison\", () => pm.expect(pm.response.json().name).to.eql(\"badly-poison\"));"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Item Pocket - Misc",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://pokeapi.co/api/v2/item-pocket/1",
+          "protocol": "https",
+          "host": [
+            "pokeapi",
+            "co"
+          ],
+          "path": [
+            "api",
+            "v2",
+            "item-pocket",
+            "1"
+          ]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"Pocket \u00e9 misc\", () => pm.expect(pm.response.json().name).to.eql(\"misc\"));"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Location - Canalave City",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://pokeapi.co/api/v2/location/1",
+          "protocol": "https",
+          "host": [
+            "pokeapi",
+            "co"
+          ],
+          "path": [
+            "api",
+            "v2",
+            "location",
+            "1"
+          ]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"Local \u00e9 canalave-city\", () => pm.expect(pm.response.json().name).to.eql(\"canalave-city\"));"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Location Area - Canalave City Area",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://pokeapi.co/api/v2/location-area/1",
+          "protocol": "https",
+          "host": [
+            "pokeapi",
+            "co"
+          ],
+          "path": [
+            "api",
+            "v2",
+            "location-area",
+            "1"
+          ]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"\u00c1rea \u00e9 canalave-city-area\", () => pm.expect(pm.response.json().name).to.eql(\"canalave-city-area\"));"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Machine - ID 1",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://pokeapi.co/api/v2/machine/1",
+          "protocol": "https",
+          "host": [
+            "pokeapi",
+            "co"
+          ],
+          "path": [
+            "api",
+            "v2",
+            "machine",
+            "1"
+          ]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"Machine carregada\", () => pm.response.code === 200);"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Move - Pound",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://pokeapi.co/api/v2/move/1",
+          "protocol": "https",
+          "host": [
+            "pokeapi",
+            "co"
+          ],
+          "path": [
+            "api",
+            "v2",
+            "move",
+            "1"
+          ]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"Move \u00e9 pound\", () => pm.expect(pm.response.json().name).to.eql(\"pound\"));"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Move Ailment - Paralysis",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://pokeapi.co/api/v2/move-ailment/1",
+          "protocol": "https",
+          "host": [
+            "pokeapi",
+            "co"
+          ],
+          "path": [
+            "api",
+            "v2",
+            "move-ailment",
+            "1"
+          ]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"Ailment \u00e9 paralysis\", () => pm.expect(pm.response.json().name).to.eql(\"paralysis\"));"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Move Category - Ailment",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://pokeapi.co/api/v2/move-category/1",
+          "protocol": "https",
+          "host": [
+            "pokeapi",
+            "co"
+          ],
+          "path": [
+            "api",
+            "v2",
+            "move-category",
+            "1"
+          ]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"Categoria \u00e9 ailment\", () => pm.expect(pm.response.json().name).to.eql(\"ailment\"));"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Pokemon - Bulbasaur",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://pokeapi.co/api/v2/pokemon/1",
+          "protocol": "https",
+          "host": [
+            "pokeapi",
+            "co"
+          ],
+          "path": [
+            "api",
+            "v2",
+            "pokemon",
+            "1"
+          ]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"Pok\u00e9mon \u00e9 bulbasaur\", () => pm.expect(pm.response.json().name).to.eql(\"bulbasaur\"));"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Pokemon Species - Bulbasaur",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://pokeapi.co/api/v2/pokemon-species/1",
+          "protocol": "https",
+          "host": [
+            "pokeapi",
+            "co"
+          ],
+          "path": [
+            "api",
+            "v2",
+            "pokemon-species",
+            "1"
+          ]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"Esp\u00e9cie \u00e9 bulbasaur\", () => pm.expect(pm.response.json().name).to.eql(\"bulbasaur\"));"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

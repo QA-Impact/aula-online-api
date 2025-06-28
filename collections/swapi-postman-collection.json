@@ -1,0 +1,360 @@
+{
+  "info": {
+    "name": "SWAPI - Star Wars API Collection",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_postman_id": "swapi-starwars-20250628035313"
+  },
+  "item": [
+    {
+      "name": "Root - Lista de Recursos",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://swapi.bry.com.br/api/",
+          "protocol": "https",
+          "host": [
+            "swapi",
+            "bry",
+            "com",
+            "br"
+          ],
+          "path": [
+            "api",
+            ""
+          ]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"Status code is 200\", () => pm.response.code === 200);",
+              "pm.test(\"Cont\u00e9m todos os recursos\", () => {",
+              "    const json = pm.response.json();",
+              "    pm.expect(json).to.have.all.keys(\"films\", \"people\", \"planets\", \"species\", \"starships\", \"vehicles\");",
+              "});"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "People - Luke Skywalker",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://swapi.bry.com.br/api/people/1/",
+          "protocol": "https",
+          "host": [
+            "swapi",
+            "bry",
+            "com",
+            "br"
+          ],
+          "path": [
+            "api",
+            "people",
+            "1",
+            ""
+          ]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"Status 200\", () => pm.response.code === 200);",
+              "pm.test(\"Nome \u00e9 Luke Skywalker\", () => pm.expect(pm.response.json().name).to.eql(\"Luke Skywalker\"));"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Films - A New Hope",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://swapi.bry.com.br/api/films/1/",
+          "protocol": "https",
+          "host": [
+            "swapi",
+            "bry",
+            "com",
+            "br"
+          ],
+          "path": [
+            "api",
+            "films",
+            "1",
+            ""
+          ]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"Filme encontrado\", () => pm.response.code === 200);",
+              "pm.test(\"T\u00edtulo \u00e9 A New Hope\", () => pm.expect(pm.response.json().title).to.eql(\"A New Hope\"));"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Starships - Death Star",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://swapi.bry.com.br/api/starships/9/",
+          "protocol": "https",
+          "host": [
+            "swapi",
+            "bry",
+            "com",
+            "br"
+          ],
+          "path": [
+            "api",
+            "starships",
+            "9",
+            ""
+          ]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"Nome \u00e9 Death Star\", () => pm.expect(pm.response.json().name).to.eql(\"Death Star\"));"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Vehicles - Sand Crawler",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://swapi.bry.com.br/api/vehicles/4/",
+          "protocol": "https",
+          "host": [
+            "swapi",
+            "bry",
+            "com",
+            "br"
+          ],
+          "path": [
+            "api",
+            "vehicles",
+            "4",
+            ""
+          ]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"Modelo \u00e9 Digger Crawler\", () => pm.expect(pm.response.json().model).to.eql(\"Digger Crawler\"));"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Species - Wookie",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://swapi.bry.com.br/api/species/3/",
+          "protocol": "https",
+          "host": [
+            "swapi",
+            "bry",
+            "com",
+            "br"
+          ],
+          "path": [
+            "api",
+            "species",
+            "3",
+            ""
+          ]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"L\u00edngua dos Wookies\", () => pm.expect(pm.response.json().language).to.eql(\"Shyriiwook\"));"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Planets - Tatooine",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://swapi.bry.com.br/api/planets/1/",
+          "protocol": "https",
+          "host": [
+            "swapi",
+            "bry",
+            "com",
+            "br"
+          ],
+          "path": [
+            "api",
+            "planets",
+            "1",
+            ""
+          ]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"Planeta \u00e9 Tatooine\", () => pm.expect(pm.response.json().name).to.eql(\"Tatooine\"));"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Search People - Leia",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://swapi.bry.com.br/api/people/?search=Leia",
+          "protocol": "https",
+          "host": [
+            "swapi",
+            "bry",
+            "com",
+            "br"
+          ],
+          "path": [
+            "api",
+            "people",
+            "?search=Leia"
+          ]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"Busca retornou pelo menos 1 resultado\", () => pm.expect(pm.response.json().results.length).to.be.above(0));",
+              "pm.test(\"Primeiro nome cont\u00e9m 'Leia'\", () => {",
+              "    const name = pm.response.json().results[0].name.toLowerCase();",
+              "    pm.expect(name).to.include(\"leia\");",
+              "});"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Search Films - hope",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://swapi.bry.com.br/api/films/?search=hope",
+          "protocol": "https",
+          "host": [
+            "swapi",
+            "bry",
+            "com",
+            "br"
+          ],
+          "path": [
+            "api",
+            "films",
+            "?search=hope"
+          ]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"Busca de filme por t\u00edtulo parcial funciona\", () => {",
+              "    const title = pm.response.json().results[0].title.toLowerCase();",
+              "    pm.expect(title).to.include(\"hope\");",
+              "});"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Search Starships - death",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://swapi.bry.com.br/api/starships/?search=death",
+          "protocol": "https",
+          "host": [
+            "swapi",
+            "bry",
+            "com",
+            "br"
+          ],
+          "path": [
+            "api",
+            "starships",
+            "?search=death"
+          ]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"Busca encontrou a nave 'Death Star'\", () => {",
+              "    const ships = pm.response.json().results.map(s => s.name.toLowerCase());",
+              "    pm.expect(ships.some(name => name.includes(\"death\"))).to.be.true;",
+              "});"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
