@@ -93,7 +93,7 @@
           "script": {
             "type": "text/javascript",
             "exec": [
-              "pm.test(\"Berry \u00e9 Cheri\", () => pm.expect(pm.response.json().name).to.eql(\"chesdfdsfri\"));"
+              "pm.test(\"Berry \u00e9 Cheri\", () => pm.expect(pm.response.json().name).to.eql(\"cheri\"));"
             ]
           }
         }
